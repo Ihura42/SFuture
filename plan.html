@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <style>
+ 
+        .container-task {
+          width: 90%;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          position: relative;
+          height:75vh;
+        }
+        
+        .button-container {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+        .button-container button {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: none;
+          background-color: #007bff;
+          color: #fff;
+          font-size: 24px;
+          cursor: pointer;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+          background-color: #0056b3;
+        }
+        .event-input-container {
+          display: none;
+          position: absolute;
+          bottom: 60px;
+          right: 10px;
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .event-input-container input {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 5px;
+          box-sizing: border-box;
+        }
+        .event-card {
+          background-color: #f9f9f9;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+      </style>
+<div class="container">
+    <div class="main">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>SFuture</h2h>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercise.html">Exercises</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <div class="middle-container">
+          <div class="exercise-cards-holder">
+            <div class="exercise-card" onclick="showModal(7)">
+                <img src="pics/exercise-example.jpg" alt="1">
+                <p>Build muscle</p>
+            </div>
+            <div class="exercise-card" onclick="showModal(8)">
+                <img src="pics/exercise-example.jpg" alt="2">
+                <p>Build muscle</p>
+            </div>
+            <div class="exercise-card" onclick="showModal(9)">
+                <img src="pics/exercise-example.jpg" alt="3">
+                <p>Build muscle</p>
+            </div>
+            <div class="exercise-card" onclick="showModal(10)">
+                <img src="pics/exercise-example.jpg" alt="4">
+                <p>Build muscle</p>
+            </div>
+            <div class="exercise-card" onclick="showModal(11)">
+                <img src="pics/exercise-example.jpg" alt="5">
+                <p>Build muscle</p>
+            </div>
+            <div class="exercise-card" onclick="showModal(12)">
+                <img src="pics/exercise-example.jpg" alt="6">
+                <p>Build muscle</p>
+            </div>
+
+            
+
+        </div>
+           
+        </div>
+
+
+        
+        <div class="welcome">
+            
+            <div class="container-task">
+                <div class="header">
+                  <div>
+                    <div id="dayOfWeek" style="font-size: 24px;"></div>
+                    <div id="date" style="font-size: 18px;"></div>
+                  </div>
+                  <div class="button-container">
+                    <button id="addEventButton">+</button>
+                  </div>
+                </div>
+                <div id="eventsContainer"></div>
+                <div class="event-input-container" id="eventInputContainer">
+                  <input type="text" id="eventNameInput" placeholder="Event name">
+                  <input type="text" id="eventStartTimeInput" placeholder="Start time (00:00)">
+                  <input type="text" id="eventEndTimeInput" placeholder="End time (00:00)">
+                  <button id="saveEventButton">Save</button>
+                </div>
+              </div>
+              
+              
+              
+        </div>
+    </div>
+</div>
+
+<div id="myModal7" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="manual">
+      <header class="header-manual">
+        <h1>Exercise technique</h1>
+      </header>
+    
+      <main class="main-manual">
+        <section class="section-manual">
+          <iframe width="1000" height="700" src="https://www.youtube.com/embed/vcBig73ojpE?si=65ydI4ndikdngkNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+</div>
+
+<div id="myModal8" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="manual">
+      <header class="header-manual">
+        <h1>Exercise technique</h1>
+      </header>
+    
+      <main class="main-manual">
+        <section class="section-manual">
+          <iframe width="1000" height="700" src="https://www.youtube.com/embed/vcBig73ojpE?si=65ydI4ndikdngkNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+</div>
+
+<div id="myModal9" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="manual">
+      <header class="header-manual">
+        <h1>Exercise technique</h1>
+      </header>
+    
+      <main class="main-manual">
+        <section class="section-manual">
+          <iframe width="1000" height="700" src="https://www.youtube.com/embed/vcBig73ojpE?si=65ydI4ndikdngkNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+</div>
+
+<div id="myModal10" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="manual">
+      <header class="header-manual">
+        <h1>Exercise technique</h1>
+      </header>
+    
+      <main class="main-manual">
+        <section class="section-manual">
+          <iframe width="1000" height="700" src="https://www.youtube.com/embed/vcBig73ojpE?si=65ydI4ndikdngkNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+</div>
+
+<div id="myModa11" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="manual">
+      <header class="header-manual">
+        <h1>Exercise technique</h1>
+      </header>
+    
+      <main class="main-manual">
+        <section class="section-manual">
+          <iframe width="1000" height="700" src="https://www.youtube.com/embed/vcBig73ojpE?si=65ydI4ndikdngkNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+</div>
+
+<div id="myModal12" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="manual">
+      <header class="header-manual">
+        <h1>Exercise technique</h1>
+      </header>
+    
+      <main class="main-manual">
+        <section class="section-manual">
+          <iframe width="1000" height="700" src="https://www.youtube.com/embed/vcBig73ojpE?si=65ydI4ndikdngkNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+</div>
+
+
+<script>
+    const dayOfWeekElement = document.getElementById('dayOfWeek');
+    const dateElement = document.getElementById('date');
+    const addEventButton = document.getElementById('addEventButton');
+    const eventInputContainer = document.getElementById('eventInputContainer');
+    const eventNameInput = document.getElementById('eventNameInput');
+    const eventStartTimeInput = document.getElementById('eventStartTimeInput');
+    const eventEndTimeInput = document.getElementById('eventEndTimeInput');
+    const saveEventButton = document.getElementById('saveEventButton');
+    const eventsContainer = document.getElementById('eventsContainer');
+  
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+    function updateDate() {
+      const now = new Date();
+      const dayOfWeek = daysOfWeek[now.getDay()];
+      const date = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  
+      dayOfWeekElement.textContent = dayOfWeek;
+      dateElement.textContent = date;
+    }
+  
+    function showEventInputContainer() {
+      eventInputContainer.style.display = 'block';
+    }
+  
+    function saveEvent() {
+      const eventName = eventNameInput.value;
+      const eventStartTime = eventStartTimeInput.value;
+      const eventEndTime = eventEndTimeInput.value;
+  
+      if (eventName.trim() !== '' && eventStartTime.trim() !== '' && eventEndTime.trim() !== '') {
+        const eventCard = document.createElement('div');
+        eventCard.classList.add('event-card');
+        eventCard.innerHTML = `
+          <strong>${eventName}</strong><br>
+          ${eventStartTime} - ${eventEndTime}
+        `;
+        eventsContainer.appendChild(eventCard);
+  
+        eventNameInput.value = '';
+        eventStartTimeInput.value = '';
+        eventEndTimeInput.value = '';
+  
+        eventInputContainer.style.display = 'none';
+      }
+    }
+  
+    addEventButton.addEventListener('click', showEventInputContainer);
+    saveEventButton.addEventListener('click', saveEvent);
+  
+    // Initial setup
+    updateDate();
+  </script>
+
+
+<script src = "script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

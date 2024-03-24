@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   
+<div class="container">
+    <div class="main">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>SFuture</h2h>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercise.html">Exercises</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <div class="middle-container">
+          <div class="exercise-cards-holder-profile">
+            <h2>Added Exercises</h2>
+            <div id="addedCardsContainer">
+                
+            </div>
+
+            
+
+        </div>
+           
+        </div>
+
+
+        
+        <div class="welcome">
+            
+            <div class="text">
+                <h2>Search exercise by category</h2>
+            </div>
+            
+            <div class="exercises-profile">
+                <div class="card-container-ex" data-card-id="1">
+                    <div class="card-ex">
+                        <div class="exercise-details">
+                            <h1>Chest</h1>
+                            <h2> Bench Press</h2>
+                            <button class="add-exercise-btn" onclick="addToAddedList(this)">Add exercise</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="pics/exercise-example.jpg" alt="Exercise image">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card-container-ex" data-card-id="2">
+                    <div class="card-ex">
+                        <div class="exercise-details">
+                            <h1>Chest</h1>
+                            <h2>Dumbbell Press</h2>
+                            <button class="add-exercise-btn" onclick="addToAddedList(this)">Add exercise</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="pics/exercise-example.jpg" alt="Exercise image">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card-container-ex" data-card-id="3">
+                    <div class="card-ex">
+                        <div class="exercise-details">
+                            <h1>Legs</h1>
+                            <h2>Barbell Squats</h2>
+                            <button class="add-exercise-btn" onclick="addToAddedList(this)">Add exercise</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="pics/exercise-example.jpg" alt="Exercise image">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card-container-ex" data-card-id="4">
+                    <div class="card-ex">
+                        <div class="exercise-details">
+                            <h1>Legs</h1>
+                            <h2>Leg Press</h2>
+                            <button class="add-exercise-btn" onclick="addToAddedList(this)">Add exercise</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="pics/exercise-example.jpg" alt="Exercise image">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card-container-ex" data-card-id="5">
+                    <div class="card-ex">
+                        <div class="exercise-details">
+                            <h1>Legs</h1>
+                            <h2>Dumbbell Lunges</h2>
+                            <button class="add-exercise-btn" onclick="addToAddedList(this)">Add exercise</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="pics/exercise-example.jpg" alt="Exercise image">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card-container-ex" data-card-id="6">
+                    <div class="card-ex">
+                        <div class="exercise-details">
+                            <h1>Back</h1>
+                            <h2>Barbell Rows</h2>
+                            <button class="add-exercise-btn" onclick="addToAddedList(this)">Add exercise</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="pics/exercise-example.jpg" alt="Exercise image">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+              
+              
+              
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    let addedExerciseCardIds = [];
+
+
+function addToAddedList(button) {
+   const exerciseCard = button.closest('.card-container-ex');
+   const exerciseCardId = exerciseCard.dataset.cardId;
+
+   
+   if (!addedExerciseCardIds.includes(exerciseCardId)) {
+       const clonedCard = exerciseCard.cloneNode(true);
+       clonedCard.classList.add('added-card');
+       document.getElementById('addedCardsContainer').appendChild(clonedCard);
+       addedExerciseCardIds.push(exerciseCardId);
+
+       
+       button.innerText = "Added";
+       button.classList.add("added");
+       button.disabled = true;
+   }
+}
+</script>
+
+
+<script src = "script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
