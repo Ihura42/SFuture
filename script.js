@@ -82,3 +82,13 @@ function closeModal(modalId) {
 
     });
 });
+
+function showSidebar(){
+  const sidebar = document.querySelector(".sidebar-small")
+  sidebar.style.display = 'flex'
+}
+
+function hideSidebar(){
+  const sidebar = document.querySelector(".sidebar-small")
+  sidebar.style.display = 'none'
+}
