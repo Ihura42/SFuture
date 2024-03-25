@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -186,50 +184,15 @@ section {
   font-size: 20px;
 }
 
-.filter-menu {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  padding: 5px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-  overflow-y: auto; 
-}
 
-.filter-menu.active {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
 
-.filter-option {
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 12px; 
-  padding: 6px 14px;
-  margin: 5px;
-}
-
-.filter-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.filter-option.active {
-  background-color: #007EFE;
-  color: white;
-}
 
 .save-btn {
   margin-top: 10px;
   align-self: center; 
 }
 
-.filter-btn, .save-btn, .add-exercise-btn{
+.save-btn, .add-exercise-btn{
   margin-top: 10px;
   width: 84px;
   height: 26px;
@@ -400,6 +363,7 @@ section {
 
 .text{
   margin-bottom:5%;
+  
 }
 
 .text-box p{
@@ -491,15 +455,14 @@ section {
   vertical-align: top; 
 }
 
-@media only screen and (max-width: 768px) {
-  /* Add your mobile-specific styles here */
-  .sidebar {
-      display: block; /* Hide the sidebar on small screens */
-  }
+@media (max-width: 1024px) {
+  
+}
 
-  .welcome {
-    display:none;
-  }
+@media (max-width: 500px) {
+  
+}
 
-  /* Adjust the layout of other elements as needed */
+@media (max-width: 500px) {
+  
 }
